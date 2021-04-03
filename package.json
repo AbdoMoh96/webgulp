@@ -1,0 +1,41 @@
+{
+  "name": "webgulp",
+  "version": "1.0.0",
+  "description": "webgulp a preconfigured Gulp bundler.",
+  "main": "index.js",
+  "scripts": {
+    "gulp-version": "gulp --version",
+    "dev": "gulp dev",
+    "build": "gulp build",
+    "serve": "npm run dev && gulp serve",
+    "watch": "npm run dev && gulp watch",
+    "wipe": "node ./gulp/clear.js && echo \"🥤🥤wiping is done Happy Hacking🥤🥤\" "
+  },
+  "keywords": [
+    "webpack",
+    "gulp",
+    "css",
+    "html",
+    "js",
+    "scss"
+  ],
+  "author": "Abdelrahman Mohammed",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-cli": "^2.3.0",
+    "gulp-cssimport": "^7.0.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "webpack-stream": "^6.1.2"
+  }
+}

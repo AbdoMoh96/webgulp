@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/*################################################################################/
+/################delete#every#thing#and#add#your#code#here#########################/
+/#################################################################################*/
+
+
+html {
+    body {
+        width: 100vw;
+        height: 100vh;
+        background: $PuRd-fallback;
+        background-image: linear-gradient(to bottom right, $PuRd-0, $PuRd-1, $PuRd-2, $PuRd-3, $PuRd-4, $PuRd-5, $PuRd-6, $PuRd-7, $PuRd-8, $PuRd-9, $PuRd-9);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        h1{
+         color: white;
+         font-size: 8rem;
+         font-family: 'Henny Penny', cursive;
+         transition: transform 0.6s ease;
+
+         &:hover {
+             transform: scale(1.1);
+         }
+        }
+
+        .pink{
+            color:$PuRd-7;
+        }
+
+        .gulp{
+            background-color: #dbdbdb;
+            padding: 20px;
+            border-radius: 50%;
+            box-shadow: 2px 2px 15px black;
+            transition: transform 0.6s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
