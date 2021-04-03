@@ -1,6 +1,13 @@
-## WebGulp
+<p align="center"><a href="" target="_blank"><img src="https://www.mediafire.com/convkey/df59/4mvdir5xgypzd5u4g.jpg" width="400"></a></p>
 
-> > WebGulp is a pre configured Gulp config made by developers for developers <br><br><br>  ![alt text](https://www.mediafire.com/convkey/df59/4mvdir5xgypzd5u4g.jpg)
+<!-- <p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+</p> -->
+
+## About WebGulp
+WebGulp is a pre configured (Webpack && Gulp) config made by developers for developers.
+
+
 
 ## installation
 <ul>
