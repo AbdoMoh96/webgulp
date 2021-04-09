@@ -1,5 +1,5 @@
 const path = require('path');
-
+const config = require('./gulp/global/config');
 
 module.exports = {
   mode: 'development',
@@ -20,7 +20,6 @@ module.exports = {
     ]
   },
   output: {
-    filename: 'script.js',
-    path: path.resolve(__dirname, 'src/assets/js'),
+    filename: config.jsDevDistName,
   },
 };

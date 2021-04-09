@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "gulp-version": "gulp --version",
-    "dev": "gulp dev",
-    "build": "gulp build",
-    "serve": "npm run dev && gulp serve",
-    "watch": "npm run dev && gulp watch",
+    "dev": "gulp dev --gulpfile ./bundler/gulpfile.js",
+    "build": "gulp build --gulpfile ./bundler/gulpfile.js",
+    "serve": "yarn dev && gulp serve --gulpfile ./bundler/gulpfile.js",
+    "watch": "yarn dev && gulp watch --gulpfile ./bundler/gulpfile.js",
     "wipe": "node ./gulp/clear.js && echo \"🥤🥤wiping is done Happy Hacking🥤🥤\" "
   },
   "keywords": [

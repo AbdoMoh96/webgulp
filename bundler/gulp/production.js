@@ -1,39 +1,40 @@
 const webGulp = require('./global/global');
+const config = require('./global/config');
 
 /*===production===configuration==*/
 function buildScssTask(){
-    return webGulp.gulp.src('./app/sass/index.scss')
+    return webGulp.gulp.src(config.sassSrc)
     .pipe(webGulp.sass())
     .pipe(webGulp.cssnano())//build
-    .pipe(webGulp.autoprefixer())
-    .pipe(webGulp.rename('style.css'))
-    .pipe(webGulp.gulp.dest(webGulp.appDist+'/assets/css/'));
+    .pipe(webGulp.autoprefixer(config.preFixer))
+    .pipe(webGulp.rename(config.sassProdDistName))
+    .pipe(webGulp.gulp.dest(config.sassProdDist));
 }
 
 function buildJsTask(){
     return (
-        webGulp.gulp.src('./app/js/index.js')
+        webGulp.gulp.src(config.jsSrc)
             .pipe(webGulp.webpack(require('../webpack.prod.js')))
-            .pipe(webGulp.gulp.dest(webGulp.appDist+'/assets/js/'))
+            .pipe(webGulp.gulp.dest(config.jsProdDist))
     );
 }
 
 
 function buildHtmlTask(){
-    return webGulp.gulp.src('./app/**/*.html')
+    return webGulp.gulp.src(config.htmlSrc)
     .pipe(webGulp.htmlmin({ collapseWhitespace: true }))
-    .pipe(webGulp.gulp.dest(webGulp.appDist+'/'));
+    .pipe(webGulp.gulp.dest(config.htmlDist));
 }
 
 function buildImageTask(){
-    webGulp.gulp.src('./app/img/**')
+    webGulp.gulp.src(config.imageSrc)
         .pipe(webGulp.imagemin())
-        .pipe(webGulp.gulp.dest(webGulp.appDist+'/img'));
+        .pipe(webGulp.gulp.dest(config.imageProdDist));
 }
 
 function buildVideosTask(){
-    webGulp.gulp.src('./app/videos/**')
-        .pipe(webGulp.gulp.dest(webGulp.appDist+'/videos'));
+    webGulp.gulp.src(config.videoSrc)
+        .pipe(webGulp.gulp.dest(config.videoProdDist));
 }
 
 async function buildTasks(){
