@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "webgulp a preconfigured Gulp bundler.",
   "main": "index.js",
-  "type":"module",
+  "type": "commonjs",
   "scripts": {
     "gulp-version": "gulp --version",
     "dev": "gulp dev --gulpfile ./bundler/gulpfile.js",
@@ -26,7 +26,6 @@
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
     "babel-loader": "^8.2.2",
-    "browser-sync": "^2.26.13",
     "eslint": "^7.2.0",
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-node": "^4.1.0",
@@ -37,6 +36,10 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "prettier": "^2.2.1"
+  },
+  "dependencies": {
+    "sass": "^1.41.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-cli": "^2.3.0",
@@ -45,9 +48,9 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^5.0.0",
+    "browser-sync": "^2.26.13",
     "gulp-sourcemaps": "^3.0.0",
-    "prettier": "^2.2.1",
     "webpack-stream": "^6.1.2"
   }
 }

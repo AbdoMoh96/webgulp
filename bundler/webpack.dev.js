@@ -1,9 +1,9 @@
-const path = require('path');
-const config = require('./gulp/global/config');
+const path = require("path");
+const config = require("./gulp/global/config");
 
 module.exports = {
-  mode: 'development',
-  devtool: 'source-map',
+  mode: "development",
+  devtool: "source-map",
   module: {
     rules: [
       {
@@ -12,12 +12,11 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+            presets: ["@babel/preset-env"],
+          },
+        },
       },
-
-    ]
+    ],
   },
   output: {
     filename: config.jsDevDistName,
